@@ -14,7 +14,7 @@ const colorMap: Record<string, string> = {
 export function Skills() {
   return (
     <SectionReveal>
-      <section className="py-20 px-6">
+      <section className="pt-8 pb-20 px-6">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-2xl font-semibold mb-10">Skills</h2>
           <div className="grid gap-8 sm:grid-cols-2">

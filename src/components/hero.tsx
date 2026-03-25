@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section
       id="about"
-      className="relative flex items-center justify-center min-h-screen px-6"
+      className="relative flex items-end justify-center min-h-[60vh] px-6 pb-16 pt-24"
     >
       <HeroBackground />
 
