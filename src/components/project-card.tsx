@@ -32,9 +32,22 @@ export function ProjectCard({ project }: { project: Project }) {
           </span>
         ))}
       </div>
-      <span className="text-sm text-zinc-600 group-hover:text-zinc-400 transition-colors">
-        View details →
-      </span>
+      <div className="flex items-center justify-between">
+        <span className="text-sm text-zinc-600 group-hover:text-zinc-400 transition-colors">
+          View details →
+        </span>
+        {project.githubUrl && (
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="text-sm text-zinc-600 hover:text-white transition-colors"
+          >
+            GitHub ↗
+          </a>
+        )}
+      </div>
     </Link>
   );
 }

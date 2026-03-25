@@ -17,6 +17,7 @@ export const projects: Project[] = [
     summary:
       "Predicted missing links in a research citation network of 4.8M nodes and 25M edges, achieving 98.1% accuracy.",
     techStack: ["PyTorch Geometric", "Python", "Graph Neural Networks"],
+    githubUrl: "https://github.com/jgwentworth92/ds677final",
     problem:
       "Researchers working with large citation networks can't easily discover connections between papers. Manual traversal of millions of nodes is impractical, and existing tools don't predict where missing links should exist.",
     approach:
