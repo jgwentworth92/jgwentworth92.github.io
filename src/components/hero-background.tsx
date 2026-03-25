@@ -4,10 +4,28 @@ import { useRef, useMemo, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
+function createCircleTexture() {
+  const size = 64;
+  const canvas = document.createElement("canvas");
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext("2d")!;
+  const center = size / 2;
+  const gradient = ctx.createRadialGradient(center, center, 0, center, center, center);
+  gradient.addColorStop(0, "rgba(255,255,255,1)");
+  gradient.addColorStop(0.4, "rgba(255,255,255,0.8)");
+  gradient.addColorStop(1, "rgba(255,255,255,0)");
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, size, size);
+  const texture = new THREE.CanvasTexture(canvas);
+  return texture;
+}
+
 function NetworkGraph() {
   const pointsRef = useRef<THREE.Points>(null);
   const linesRef = useRef<THREE.LineSegments>(null);
   const mouse = useRef({ x: 0, y: 0 });
+  const circleTexture = useMemo(() => createCircleTexture(), []);
 
   useEffect(() => {
     const onMouseMove = (e: MouseEvent) => {
@@ -75,7 +93,14 @@ function NetworkGraph() {
             args={[positions, 3]}
           />
         </bufferGeometry>
-        <pointsMaterial color="#444" size={0.04} sizeAttenuation />
+        <pointsMaterial
+          color="#666"
+          size={0.06}
+          sizeAttenuation
+          transparent
+          map={circleTexture}
+          depthWrite={false}
+        />
       </points>
       <lineSegments ref={linesRef}>
         <bufferGeometry>
@@ -84,7 +109,7 @@ function NetworkGraph() {
             args={[linePositions, 3]}
           />
         </bufferGeometry>
-        <lineBasicMaterial color="#222" transparent opacity={0.4} />
+        <lineBasicMaterial color="#2a2a2a" transparent opacity={0.35} />
       </lineSegments>
     </>
   );
