@@ -49,6 +49,46 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "healmate",
+    title: "HealMate — AI Virtual Therapist",
+    summary:
+      "AI-powered mental health platform with an interactive 3D virtual therapist, built at HackNJIT 2024.",
+    techStack: ["FastAPI", "LangChain", "LangGraph", "WebSockets", "Docker"],
+    githubUrl: "https://github.com/tabrezdn1/hacknjit24-fe",
+    problem:
+      "Mental health support is often inaccessible or impersonal. Existing chatbot solutions lack engagement and don't feel like real conversations with a therapist.",
+    approach:
+      "Built the backend with FastAPI and LangChain/LangGraph to power AI-driven therapeutic conversations. Used WebSockets for real-time communication and integrated external knowledge bases via Wikipedia and Tavily APIs. The frontend featured a customizable 3D avatar built with Three.js.",
+    results:
+      "Delivered a working prototype at HackNJIT 2024 with real-time AI conversations, customizable 3D therapist avatar, and full CI/CD pipeline with Docker and Terraform.",
+    highlights: [
+      "LangChain + LangGraph multi-agent conversation pipeline",
+      "Real-time WebSocket communication",
+      "Dockerized backend with Terraform IaC",
+      "External knowledge retrieval via Tavily and Wikipedia",
+    ],
+  },
+  {
+    slug: "discofy",
+    title: "Discofy — AI Music Discovery",
+    summary:
+      "AI-powered music discovery app that curates personalized playlists based on mood, energy, and lyrical preferences. Built at GirlHacks 2024.",
+    techStack: ["FastAPI", "LangChain", "MongoDB", "Qdrant", "Docker"],
+    githubUrl: "https://github.com/tabrezdn1/girlhacks24-fe",
+    problem:
+      "Finding new music that matches a specific mood or vibe requires endless manual browsing through playlists. Existing recommendation engines rely on listening history, not how you feel right now.",
+    approach:
+      "Built the backend with FastAPI and a two-stage LangChain pipeline: first retrieves matching songs using Qdrant vector search, then fetches YouTube and Spotify links. MongoDB stores playlists and user data. Deployed on AWS with Docker.",
+    results:
+      "Delivered at GirlHacks 2024. Users describe their mood and preferences, and the app returns curated song recommendations with embedded Spotify and YouTube players.",
+    highlights: [
+      "Two-stage LangChain pipeline for song discovery",
+      "Qdrant vector store for semantic song matching",
+      "MongoDB async operations with Motor driver",
+      "LangSmith observability for LLM pipeline monitoring",
+    ],
+  },
+  {
     slug: "text-embedding-clustering",
     title: "Text Embedding Clustering Framework",
     summary:
