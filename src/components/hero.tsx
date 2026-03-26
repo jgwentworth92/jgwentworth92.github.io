@@ -34,22 +34,6 @@ export function Hero() {
           I build data pipelines, RAG systems, and backend infrastructure.
           MS in Data Science from NJIT.
         </p>
-
-        {/* Impact metrics */}
-        <div className="flex flex-wrap gap-6 sm:gap-10 justify-center mb-8 text-center">
-          <div>
-            <span className="block text-2xl font-bold text-white">4.8M+</span>
-            <span className="text-xs text-zinc-500 uppercase tracking-wider">Nodes Processed</span>
-          </div>
-          <div>
-            <span className="block text-2xl font-bold text-white">98.1%</span>
-            <span className="text-xs text-zinc-500 uppercase tracking-wider">Model Accuracy</span>
-          </div>
-          <div>
-            <span className="block text-2xl font-bold text-white">5+</span>
-            <span className="text-xs text-zinc-500 uppercase tracking-wider">Production Systems</span>
-          </div>
-        </div>
         <div className="flex flex-wrap gap-3 justify-center">
           <a
             href="/Jonathan_Grossman_Resume.pdf"
