@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 
 const HeroBackground = dynamic(
@@ -22,17 +23,34 @@ export function Hero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-center max-w-2xl"
       >
+        {/* Headshot */}
+        <div className="mb-6">
+          <Image
+            src="/headshot.jpg"
+            alt="Jonathan Grossman"
+            width={120}
+            height={120}
+            className="rounded-full mx-auto border-2 border-zinc-700 object-cover"
+            priority
+          />
+        </div>
+
+        <p className="font-mono text-sm text-zinc-500 mb-3 tracking-wider">
+          Hey, I&apos;m
+        </p>
         <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-4">
           Jonathan Grossman
+          <span className="inline-block w-[3px] h-[0.9em] bg-zinc-500 ml-2 animate-pulse align-middle" />
         </h1>
-        <p className="text-lg sm:text-xl text-zinc-400 mb-6 tracking-wide">
+        <p className="font-mono text-sm sm:text-base text-zinc-400 mb-6 tracking-wide">
           Data Engineer{" "}
           <span className="text-zinc-600">·</span> Backend Developer{" "}
           <span className="text-zinc-600">·</span> AI Builder
         </p>
         <p className="text-zinc-500 mb-8 max-w-lg mx-auto leading-relaxed">
-          I build data pipelines, RAG systems, and backend infrastructure.
-          MS in Data Science from NJIT.
+          I love turning messy data into systems that actually work — from
+          RAG pipelines and knowledge graphs to production ETL and backend
+          APIs. MS in Data Science from NJIT.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
           <a

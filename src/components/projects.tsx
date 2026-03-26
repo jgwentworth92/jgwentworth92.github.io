@@ -10,7 +10,7 @@ export function Projects() {
     <SectionReveal>
       <section id="projects" className="py-20 px-6">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-2xl font-semibold mb-10">Projects</h2>
+          <h2 className="text-2xl font-semibold mb-10"><span className="font-mono text-zinc-600 mr-2">//</span>Projects</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project, i) => (
               <motion.div

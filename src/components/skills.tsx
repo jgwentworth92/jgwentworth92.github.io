@@ -16,7 +16,7 @@ export function Skills() {
     <SectionReveal>
       <section className="pt-8 pb-20 px-6">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-2xl font-semibold mb-10">Skills</h2>
+          <h2 className="text-2xl font-semibold mb-10"><span className="font-mono text-zinc-600 mr-2">//</span>Skills</h2>
           <div className="grid gap-8 sm:grid-cols-2">
             {skillCategories.map((category) => (
               <div key={category.name}>

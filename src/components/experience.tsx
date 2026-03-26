@@ -9,7 +9,7 @@ export function Experience() {
     <SectionReveal>
       <section id="experience" className="py-20 px-6">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-2xl font-semibold mb-10">Experience</h2>
+          <h2 className="text-2xl font-semibold mb-10"><span className="font-mono text-zinc-600 mr-2">//</span>Experience</h2>
           <div className="space-y-8">
             {experience.map((entry, i) => (
               <motion.div

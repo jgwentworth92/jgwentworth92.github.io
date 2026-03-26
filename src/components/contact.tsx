@@ -5,7 +5,7 @@ export function Contact() {
     <SectionReveal>
       <section id="contact" className="py-20 px-6">
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
+          <h2 className="text-2xl font-semibold mb-4"><span className="font-mono text-zinc-600 mr-2">//</span>Get in Touch</h2>
           <p className="text-zinc-400 mb-8">
             Open to opportunities — feel free to reach out.
           </p>
