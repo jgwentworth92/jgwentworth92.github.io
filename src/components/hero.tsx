@@ -25,13 +25,31 @@ export function Hero() {
         <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-4">
           Jonathan Grossman
         </h1>
-        <p className="text-xl sm:text-2xl text-zinc-400 mb-6">
-          Data Engineer & Backend Developer
+        <p className="text-lg sm:text-xl text-zinc-400 mb-6 tracking-wide">
+          Data Engineer{" "}
+          <span className="text-zinc-600">·</span> Backend Developer{" "}
+          <span className="text-zinc-600">·</span> AI Builder
         </p>
         <p className="text-zinc-500 mb-8 max-w-lg mx-auto leading-relaxed">
           I build data pipelines, RAG systems, and backend infrastructure.
           MS in Data Science from NJIT.
         </p>
+
+        {/* Impact metrics */}
+        <div className="flex flex-wrap gap-6 sm:gap-10 justify-center mb-8 text-center">
+          <div>
+            <span className="block text-2xl font-bold text-white">4.8M+</span>
+            <span className="text-xs text-zinc-500 uppercase tracking-wider">Nodes Processed</span>
+          </div>
+          <div>
+            <span className="block text-2xl font-bold text-white">98.1%</span>
+            <span className="text-xs text-zinc-500 uppercase tracking-wider">Model Accuracy</span>
+          </div>
+          <div>
+            <span className="block text-2xl font-bold text-white">5+</span>
+            <span className="text-xs text-zinc-500 uppercase tracking-wider">Production Systems</span>
+          </div>
+        </div>
         <div className="flex flex-wrap gap-3 justify-center">
           <a
             href="/Jonathan_Grossman_Resume.pdf"

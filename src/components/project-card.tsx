@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { useRouter } from "next/navigation";
 import type { Project } from "@/data/projects";
 
 const tagColors = [
@@ -9,10 +11,17 @@ const tagColors = [
 ];
 
 export function ProjectCard({ project }: { project: Project }) {
+  const router = useRouter();
+
   return (
-    <Link
-      href={`/projects/${project.slug}`}
-      className="group block rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 hover:border-zinc-700 hover:bg-zinc-900 transition-all"
+    <div
+      role="link"
+      tabIndex={0}
+      onClick={() => router.push(`/projects/${project.slug}`)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") router.push(`/projects/${project.slug}`);
+      }}
+      className="group block rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 hover:border-zinc-700 hover:bg-zinc-900 transition-all cursor-pointer"
     >
       <h3 className="font-semibold text-lg mb-2 group-hover:text-white transition-colors">
         {project.title}
@@ -48,6 +57,6 @@ export function ProjectCard({ project }: { project: Project }) {
           </a>
         )}
       </div>
-    </Link>
+    </div>
   );
 }
